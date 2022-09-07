@@ -15,7 +15,8 @@ for p in range(1,51):
 	resp=requests.get(url,headers=headers)
 	doc=PyQuery(resp.text)
 	#存储数据
-    for hotel in doc.items('.hotel-block'):
+
+for hotel in doc.items('.hotel-block'):
 		hotel_name=hotel('.hotel-name-link').text()
 		addr1=hotel('.place a').text()
 		addr2=hotel('.walk-dist').text()[1:]
